@@ -30,6 +30,8 @@ mkdir build && cd build
 cmake .. -DPY_VERSION=3 -DPYTHON_EXECUTABLE=`which python3` -DWITH_LOONGARCH=ON \
          -DWITH_TESTING=OFF -DON_INFER=ON -DWITH_XBYAK=OFF
 
+> 4000处理需要将WITH_LOONGARCH改为WITH_MIPS
+
 # 使用以下命令来编译
 make -j$(nproc)
 ```
@@ -137,6 +139,8 @@ WITH_MKL=OFF
 WITH_GPU=OFF
 WITH_ARM=OFF
 WITH_LOONGARCH=ON
+
+> 4000处理需要修改WITH_MIPS为ON
 
 # 5) 执行编译，编译完成之后在 build 下生成 resnet50_test 可执行文件
 ./compile.sh
